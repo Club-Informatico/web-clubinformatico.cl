@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Informático Chile</title>
+    <!-- Iconos de FontAwesome para redes sociales y UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* =========================================
+           VARIABLES Y CONFIGURACIÓN BASE
+           ========================================= */
+        :root {
+            /* Paleta de Colores Dark Mode Neon */
+            --bg-color: #050505;
+            --card-bg: #121212;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            
+            /* Colores Neón */
+            --neon-primary: #00f3ff; /* Cian eléctrico */
+            --neon-secondary: #bc13fe; /* Magenta / Violeta */
+            --neon-accent: #ff003c; /* Rojo para detalles agresivos (como los ojos del logo) */
+            
+            /* Espaciado y Dimensiones */
+            --container-width: 1200px;
+            --header-height: 80px;
+            --border-radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar personalizada */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--neon-primary);
+            border-radius: 5px;
+        }
+
+        /* =========================================
+           HEADER & NAVEGACIÓN
+           ========================================= */
+        header {
+            background-color: rgba(5, 5, 5, 0.95);
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 243, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-img {
+            max-height: 50px;
+            width: auto;
+            filter: drop-shadow(0 0 5px var(--neon-primary));
+            transition: transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .logo-text span {
+            color: var(--neon-primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--neon-primary);
+            text-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
+        }
+
+        /* Efecto de línea al pasar el mouse */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--neon-secondary);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Botón de menú móvil (oculto en escritorio) */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--neon-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* =========================================
+           SECCIÓN HERO (BIENVENIDA)
+           ========================================= */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            background: radial-gradient(circle at center, rgba(0, 243, 255, 0.05) 0%, transparent 70%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+            animation: fadeIn Up 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            background: linear-gradient(90deg, #fff, var(--neon-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 35px;
+            background: transparent;
+            border: 2px solid var(--neon-primary);
+            color: var(--neon-primary);
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--neon-primary);
+            color: #000;
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.6);
+            transform: translateY(-3px);
+        }
+
+        /* Elemento decorativo de fondo */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* =========================================
+           SECCIÓN BLOG
+           ========================================= */
+        .section-padding {
+            padding: 100px 5%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--neon-secondary);
+            margin: 10px auto 0;
+            border-radius: 2px;
+            box-shadow: 0 0 10px var(--neon-secondary);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--neon-secondary);
+            box-shadow: 0 10px 30px rgba(188, 19, 254, 0.15);
+        }
+
+        .blog-img {
+            height: 200px;
+            background-color: #1a1a1a;
+            overflow: hidden;
+        }
+        
+        .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .blog-card:hover .blog-img img {
+            transform: scale(1.1);
+        }
+
+        .blog-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-date {
+            font-size: 0.8rem;
+            color: var(--neon-primary);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .blog-excerpt {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .read-more {
+            color: var(--neon-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: gap 0.3s;
+        }
+
+        .read-more:hover {
+            gap: 10px;
+            text-shadow: 0 0 8px var(--neon-secondary);
+        }
+
+        /* =========================================
+           SECCIÓN REDES SOCIALES
+           ========================================= */
+        .social-section {
+            background: linear-gradient(180deg, var(--bg-color) 0%, #0f0f15 100%);
+            text-align: center;
+        }
+
+        .social-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-muted);
+            transition: all 0.3s;
+            width: 120px;
+        }
+
+        .social-icon-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        /* Colores específicos para redes al hacer hover */
+        .social-link.instagram:hover .social-icon-box {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            border: none;
+            box-shadow: 0 0 20px rgba(214, 36, 159, 0.4);
+        }
+
+        .social-link.github:hover .social-icon-box {
+            background-color: #fff;
+            color: #000;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
+
+        .social-link.discord:hover .social-icon-box {
+            background-color: #5865F2;
+            border-color: #5865F2;
+            box-shadow: 0 0 20px rgba(88, 101, 242, 0.4);
+        }
+        
+        .social-link.linkedin:hover .social-icon-box {
+            background-color: #0077b5;
+            border-color: #0077b5;
+            box-shadow: 0 0 20px rgba(0, 119, 181, 0.4);
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        footer {
+            background-color: #000;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .footer-logo span {
+            color: var(--neon-accent);
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .contact-info i {
+            color: var(--neon-primary);
+        }
+
+        .contact-info a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--neon-primary);
+            text-shadow: 0 0 5px var(--neon-primary);
+        }
+
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        /* =========================================
+           RESPONSIVE
+           ========================================= */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1002;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background-color: rgba(10, 10, 10, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: right 0.4s ease;
+                border-left: 1px solid var(--neon-primary);
+            }
+
+            nav ul.show {
+                right: 0;
+            }
+            
+            nav a {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Animaciones simples */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo-container">
+            <!-- Logo proporcionado por el usuario -->
+            <img src="https://z-cdn-media.chatglm.cn/files/1d090799-b756-4696-912b-2b157138b026.png?auth_key=1867495359-76be3c1298154a9cb9e378fa35f4825a-0-07b28e7313a6c06315576eb162c049bb" alt="Club Informático Logo" class="logo-img">
+            <div class="logo-text">Club <span>Informático</span></div>
+        </a>
+
+        <button class="mobile-menu-btn" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav>
+            <ul id="nav-list">
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#redes">Redes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección Inicio (Hero) -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Bienvenidos al <br>Club Informático</h1>
+                <p>Un espacio para entusiastas de la informática, desarrolladores y amantes de la tecnología en Chile. Innovamos, programamos y compartimos conocimiento.</p>
+                <a href="#blog" class="cta-button">Ver Actividades</a>
+            </div>
+        </section>
+
+        <!-- Sección Blog (Showcase de artículos Pelican) -->
+        <section id="blog" class="section-padding">
+            <h2 class="section-title">Últimas Actividades</h2>
+            
+            <div class="blog-grid">
+                <!-- Artículo 1 (Ejemplo de Post Pelican) -->
+                <article class="blog-card">
+                    <div class="blog-img">
+                        <!-- Imagen placeholder tecnológica -->
+                        <img src="https://picsum.photos/seed/code1/600/400" alt="Sesión de Python">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">12 Octubre, 2023</span>
+                        <h3 class="blog-title">Introducción a Python y Data Science</h3>
+                        <p class="blog-excerpt">Resumen de nuestra última sesión donde exploramos las bases de Pandas y NumPy para el análisis de datos.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Artículo 2 -->
+                <article class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://picsum.photos/seed/hack/600/400" alt="Hackathon Local">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">28 Septiembre, 2023</span>
+                        <h3 class="blog-title">Resumen del Hackathon 2023</h3>
+                        <p class="blog-excerpt">Los ganadores del hackathon local nos muestran sus proyectos de IoT y soluciones urbanas.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Artículo 3 -->
+                <article class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://picsum.photos/seed/security/600/400" alt="Ciberseguridad">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">15 Septiembre, 2023</span>
+                        <h3 class="blog-title">Taller de Ciberseguridad Básica</h3>
+                        <p class="blog-excerpt">Aprende a proteger tus datos y los conceptos fundamentales de la seguridad en redes.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Redes Sociales -->
+        <section id="redes" class="section-padding">
+            <h2 class="section-title">Síguenos</h2>
+                        
+            <div class="social-container">
+               <!-- <a href="#" class="social-link instagram">
+                    <div class="social-icon-box">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <span>Instagram</span>
+                </a> -->
+
+                <a href="https://discord.gg/4mRBsTEMF5" class="social-link discord">
+                    <div class="social-icon-box">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <span>Discord</span>
+                </a>
+
+                <a href="https://github.com/Club-Informatico" class="social-link github">
+                    <div class="social-icon-box">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <span>GitHub</span>
+                </a>
+
+                <a href="https://www.linkedin.com/groups/14942046/" class="social-link linkedin">
+                    <div class="social-icon-box">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-logo">Club <span>Informático</span> Chile</div>
+        
+        <div class="contact-info">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:contacto@clubinformático.cl">contacto@clubinformático.cl</a>
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 Club Informático. Diseñado para Pelican.
+        </p>
+    </footer>
+
+    <!-- JavaScript Mínimo para el menú móvil -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navList = document.querySelector('#nav-list');
+            const navLinks = document.querySelectorAll('#nav-list a');
+
+            // Toggle menú móvil
+            menuBtn.addEventListener('click', () => {
+                navList.classList.toggle('show');
+                // Cambiar icono de hamburguesa a X
+                const icon = menuBtn.querySelector('i');
+                if (navList.classList.contains('show')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Cerrar menú al hacer clic en un enlace
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navList.classList.remove('show');
+                    const icon = menuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+
+            // Efecto de Scroll suave para links internos
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
