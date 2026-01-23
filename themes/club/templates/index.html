@@ -8,7 +8,7 @@
     <div class="carousel-inner">
 
         {% for article in articles[:3] %}
-        <div class="carousel-item {% if loop.first %}active{% endif %}">
+        <div class="carousel-item{% if loop.first %} active{% endif %}">
             <img src="{{ article.header_image | default(SITEURL ~ '/theme/img/default.jpg') }}">
             <div class="carousel-caption">
                 <h2>{{ article.title }}</h2>
@@ -21,12 +21,12 @@
 
     <div class="carousel-controls">
         {% for article in articles[:3] %}
-        <div class="carousel-dot {% if loop.first %}active{% endif %}"
-             data-index="{{ loop.index0 }}">
-        </div>
+        <div class="carousel-dot{% if loop.first %} active{% endif %}"
+             data-index="{{ loop.index0 }}"></div>
         {% endfor %}
     </div>
 </section>
+
 
 
 <section class="container">
