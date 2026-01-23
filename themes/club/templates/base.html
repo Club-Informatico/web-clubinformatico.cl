@@ -30,13 +30,50 @@
 
 <footer class="footer">
     <div class="container">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>Club Informático</h3>
+                <p>
+                    Explorando los límites de la tecnología, la sociedad
+                    y el futuro desde una perspectiva ciberpunk.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul class="footer-links">
+                    <li><a href="{{ SITEURL }}/">Inicio</a></li>
+                    <li><a href="{{ SITEURL }}/categories.html">Categorías</a></li>
+                    <li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
+                    <li><a href="{{ SITEURL }}/archives.html">Archivo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Categorías</h3>
+                <ul class="footer-links">
+                    {% for category, _ in categories %}
+                        <li>
+                            <a href="{{ SITEURL }}/{{ category.url }}">
+                                {{ category }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+
         <div class="copyright">
             <p>&copy; {{ CURRENT_YEAR }} {{ SITENAME }}</p>
         </div>
     </div>
 </footer>
 
+
 <script src="{{ SITEURL }}/theme/js/main.js"></script>
+
 {% block extra_js %}{% endblock %}
 </body>
 </html>

@@ -4,19 +4,30 @@
 
 {% block content %}
 
-<section class="carousel">
+<section class="carousel" id="home">
     <div class="carousel-inner">
+
         {% for article in articles[:3] %}
         <div class="carousel-item {% if loop.first %}active{% endif %}">
-            <img src="{{ article.header_image | default('/theme/img/default.jpg') }}">
+            <img src="{{ article.header_image | default(SITEURL ~ '/theme/img/default.jpg') }}">
             <div class="carousel-caption">
                 <h2>{{ article.title }}</h2>
                 <p>{{ article.summary }}</p>
             </div>
         </div>
         {% endfor %}
+
+    </div>
+
+    <div class="carousel-controls">
+        {% for article in articles[:3] %}
+        <div class="carousel-dot {% if loop.first %}active{% endif %}"
+             data-index="{{ loop.index0 }}">
+        </div>
+        {% endfor %}
     </div>
 </section>
+
 
 <section class="container">
     <h2 class="section-title">Últimas Entradas</h2>
@@ -35,5 +46,44 @@
         {% endfor %}
     </div>
 </section>
+
+<section class="social-section" id="contact">
+    <div class="container">
+        <h2 class="section-title">Conéctate con Nosotros</h2>
+
+        <div class="social-container">
+            <a href="https://twitter.com/" class="social-icon">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+            </a>
+
+            <a href="https://discord.com/" class="social-icon">
+                <i class="fab fa-discord"></i>
+                <span>Discord</span>
+            </a>
+
+            <a href="https://github.com/" class="social-icon">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+
+            <a href="https://youtube.com/" class="social-icon">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+
+            <a href="https://instagram.com/" class="social-icon">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+
+            <a href="https://linkedin.com/" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </div>
+</section>
+
 
 {% endblock %}
