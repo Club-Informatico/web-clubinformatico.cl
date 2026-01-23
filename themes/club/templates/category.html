@@ -1,15 +1,33 @@
 {% extends "base.html" %}
+
+{% block title %}{{ category }} | {{ SITENAME }}{% endblock %}
+
 {% block content %}
-<section class="container">
-    <h1>Categorías</h1>
-    <ul>
-        {% for category, articles in categories %}
-        <li>
-            <a href="{{ SITEURL }}/{{ category.url }}">
-                {{ category }} ({{ articles|length }})
+<section class="container-page category-detail-page">
+    <h1 class="section-title">{{ category }}</h1>
+
+    <div class="category-posts-grid">
+        {% for article in articles %}
+        <article class="category-post-card">
+            <h3>
+                <a href="{{ SITEURL }}/{{ article.url }}">
+                    {{ article.title }}
+                </a>
+            </h3>
+
+            <span class="post-date">
+                {{ article.date.strftime('%d %B %Y') }}
+            </span>
+
+            <p class="post-excerpt">
+                {{ article.summary }}
+            </p>
+
+            <a href="{{ SITEURL }}/{{ article.url }}" class="read-more">
+                Leer artículo →
             </a>
-        </li>
+        </article>
         {% endfor %}
-    </ul>
+    </div>
 </section>
 {% endblock %}

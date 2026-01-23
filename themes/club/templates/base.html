@@ -12,21 +12,26 @@
     {% block extra_head %}{% endblock %}
 </head>
 <body>
-
+    
+<header>
 <nav class="navbar">
-    <div class="logo">Club<span>Informático</span></div>
+    <a href="{{ SITEURL }}/"><div class="logo">Club<span>Informático</span></div></a>
     <div class="menu-toggle" id="menuToggle">
         <i class="fas fa-bars"></i>
     </div>
     <ul class="nav-links" id="navLinks">
         <li><a href="{{ SITEURL }}/">Inicio</a></li>
+        <li><a href="{{ SITEURL }}#latest-posts">Últimas Entradas</a></li>
+        <li><a href="{{ SITEURL }}#contact">Contacto</a></li>
         <li><a href="{{ SITEURL }}/categories.html">Categorías</a></li>
-        <li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
         <li><a href="{{ SITEURL }}/archives.html">Archivo</a></li>
     </ul>
 </nav>
+</header>
 
+<main class="site-main">
 {% block content %}{% endblock %}
+</main>
 
 <footer class="footer">
     <div class="container">
@@ -35,8 +40,9 @@
             <div class="footer-section">
                 <h3>Club Informático</h3>
                 <p>
-                    Explorando los límites de la tecnología, la sociedad
-                    y el futuro desde una perspectiva ciberpunk.
+                    ¡Bienvenido al punto de encuentro para los apasionados de la tecnología!
+                    Si te gustan la programación, la ciberseguridad, el hardware, el software libre, 
+                    o simplemente aprender cosas nuevas, este es tu lugar.
                 </p>
             </div>
 
@@ -44,8 +50,9 @@
                 <h3>Enlaces</h3>
                 <ul class="footer-links">
                     <li><a href="{{ SITEURL }}/">Inicio</a></li>
+                    <li><a href="{{ SITEURL }}#latest-posts">Últimas Entradas</a></li>
+                    <li><a href="{{ SITEURL }}#contact">Contacto</a></li>
                     <li><a href="{{ SITEURL }}/categories.html">Categorías</a></li>
-                    <li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
                     <li><a href="{{ SITEURL }}/archives.html">Archivo</a></li>
                 </ul>
             </div>

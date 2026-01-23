@@ -11,72 +11,84 @@
 
 </head>
 <body>
-
+    
+<header>
 <nav class="navbar">
-    <div class="logo">Club<span>Informático</span></div>
+    <a href="../"><div class="logo">Club<span>Informático</span></div></a>
     <div class="menu-toggle" id="menuToggle">
         <i class="fas fa-bars"></i>
     </div>
     <ul class="nav-links" id="navLinks">
         <li><a href="../">Inicio</a></li>
+        <li><a href="..#latest-posts">Últimas Entradas</a></li>
+        <li><a href="..#contact">Contacto</a></li>
         <li><a href="../categories.html">Categorías</a></li>
-        <li><a href="../tags.html">Tags</a></li>
         <li><a href="../archives.html">Archivo</a></li>
     </ul>
 </nav>
+</header>
 
+<main class="site-main">
 
 <section class="carousel" id="home">
     <div class="carousel-inner">
 
         <div class="carousel-item active">
-            <img src="../theme/img/default.jpg">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                 alt="Futurista ciudad nocturna">
             <div class="carousel-caption">
-                <h2>Biografía del Autor</h2>
-                <p><p>Biografía de Carlos Carrasco</p></p>
+                <h2>¡Bienvenido al punto de encuentro para los apasionados de la tecnología!</h2>
+                <p>
+                    Si te gustan la programación, la ciberseguridad, el hardware, el software libre, este es tu lugar.
+                </p>
             </div>
         </div>
+
         <div class="carousel-item">
-            <img src="../theme/img/default.jpg">
+            <img src="https://edu-labs.co/wp-content/uploads/2024/06/medium-shot-man-wearing-vr-glasses-scaled.jpg"
+                 alt="Realidad virtual">
             <div class="carousel-caption">
-                <h2>Segundo Post</h2>
-                <p><p>Biografía de Carlos Carrasco</p></p>
+                <h2>Únete a Club Informático</h2>
+                <p>
+                    Sé parte de una comunidad donde aprender y compartir es una experiencia segura y entretenida.
+                </p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                 alt="Tecnología cibernética">
+            <div class="carousel-caption">
+                <h2>Explora Club Informático</h2>
+                <p>
+                    Descubre un espacio donde la curiosidad, el aprendizaje y la colaboración se encuentran.
+                </p>
             </div>
         </div>
 
     </div>
 
     <div class="carousel-controls">
-        <div class="carousel-dot active"
-             data-index="0"></div>
-        <div class="carousel-dot"
-             data-index="1"></div>
+        <div class="carousel-dot active" data-index="0"></div>
+        <div class="carousel-dot" data-index="1"></div>
+        <div class="carousel-dot" data-index="2"></div>
     </div>
 </section>
 
 
 
-<section class="container">
+
+<section class="container" id="latest-posts">
     <h2 class="section-title">Últimas Entradas</h2>
     <div class="blog-posts">
         <article class="post-card">
-            <img src="/theme/img/default.jpg"
+            <img src="images/post2.avif"
                  class="post-image">
             <div class="post-content">
                 <span class="post-date">25 septiembre 2022</span>
-                <h3 class="post-title">Biografía del Autor</h3>
+                <h3 class="post-title">tercer Post</h3>
                 <p class="post-excerpt"><p>Biografía de Carlos Carrasco</p></p>
-                <a href="../biografia-del-autor.html" class="read-more">Leer más</a>
-            </div>
-        </article>
-        <article class="post-card">
-            <img src="/theme/img/default.jpg"
-                 class="post-image">
-            <div class="post-content">
-                <span class="post-date">25 septiembre 2022</span>
-                <h3 class="post-title">Segundo Post</h3>
-                <p class="post-excerpt"><p>Biografía de Carlos Carrasco</p></p>
-                <a href="../segundo-post.html" class="read-more">Leer más</a>
+                <a href="../tercer-post.html" class="read-more">Leer más</a>
             </div>
         </article>
     </div>
@@ -87,40 +99,36 @@
         <h2 class="section-title">Conéctate con Nosotros</h2>
 
         <div class="social-container">
-            <a href="https://twitter.com/" class="social-icon">
-                <i class="fab fa-twitter"></i>
-                <span>Twitter</span>
-            </a>
-
-            <a href="https://discord.com/" class="social-icon">
+            <a href="https://discord.gg/4mRBsTEMF5" class="social-icon">
                 <i class="fab fa-discord"></i>
                 <span>Discord</span>
             </a>
 
-            <a href="https://github.com/" class="social-icon">
+            <a href="https://github.com/Club-Informatico" class="social-icon">
                 <i class="fab fa-github"></i>
                 <span>GitHub</span>
             </a>
 
-            <a href="https://youtube.com/" class="social-icon">
+            <a href="https://www.youtube.com/@ClubInformatico" class="social-icon">
                 <i class="fab fa-youtube"></i>
                 <span>YouTube</span>
             </a>
 
-            <a href="https://instagram.com/" class="social-icon">
-                <i class="fab fa-instagram"></i>
-                <span>Instagram</span>
+            <a href="https://www.linkedin.com/groups/14942046/" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+                <span>Linkedin</span>
             </a>
 
-            <a href="https://linkedin.com/" class="social-icon">
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
+            <a href="https://www.tiktok.com/@club.informtico" class="social-icon">
+                <i class="fab fa-tiktok"></i>
+                <span>TikTok</span>
             </a>
         </div>
     </div>
 </section>
 
 
+</main>
 
 <footer class="footer">
     <div class="container">
@@ -129,8 +137,9 @@
             <div class="footer-section">
                 <h3>Club Informático</h3>
                 <p>
-                    Explorando los límites de la tecnología, la sociedad
-                    y el futuro desde una perspectiva ciberpunk.
+                    ¡Bienvenido al punto de encuentro para los apasionados de la tecnología!
+                    Si te gustan la programación, la ciberseguridad, el hardware, el software libre, 
+                    o simplemente aprender cosas nuevas, este es tu lugar.
                 </p>
             </div>
 
@@ -138,8 +147,9 @@
                 <h3>Enlaces</h3>
                 <ul class="footer-links">
                     <li><a href="../">Inicio</a></li>
+                    <li><a href="..#latest-posts">Últimas Entradas</a></li>
+                    <li><a href="..#contact">Contacto</a></li>
                     <li><a href="../categories.html">Categorías</a></li>
-                    <li><a href="../tags.html">Tags</a></li>
                     <li><a href="../archives.html">Archivo</a></li>
                 </ul>
             </div>
@@ -148,8 +158,13 @@
                 <h3>Categorías</h3>
                 <ul class="footer-links">
                         <li>
-                            <a href="../category/biografia.html">
-                                Biografía
+                            <a href="../category/comunidad.html">
+                                Comunidad
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../category/linux.html">
+                                Linux
                             </a>
                         </li>
                 </ul>

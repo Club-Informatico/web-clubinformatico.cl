@@ -1,8 +1,34 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ClubInformatico - Articles by Carlos Carrasco</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% block title %}Inicio | {{ SITENAME }}{% endblock %}
+    <link rel="stylesheet" href="../theme/css/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-{% block content %}
+</head>
+<body>
+    
+<header>
+<nav class="navbar">
+    <a href="../"><div class="logo">Club<span>Informático</span></div></a>
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="../">Inicio</a></li>
+        <li><a href="..#latest-posts">Últimas Entradas</a></li>
+        <li><a href="..#contact">Contacto</a></li>
+        <li><a href="../categories.html">Categorías</a></li>
+        <li><a href="../archives.html">Archivo</a></li>
+    </ul>
+</nav>
+</header>
+
+<main class="site-main">
 
 <section class="carousel" id="home">
     <div class="carousel-inner">
@@ -55,18 +81,16 @@
 <section class="container" id="latest-posts">
     <h2 class="section-title">Últimas Entradas</h2>
     <div class="blog-posts">
-        {% for article in articles %}
         <article class="post-card">
-            <img src="{{ article.header_image | default('/theme/img/default.jpg') }}"
+            <img src="images/post1.avif"
                  class="post-image">
             <div class="post-content">
-                <span class="post-date">{{ article.date.strftime('%d %B %Y') }}</span>
-                <h3 class="post-title">{{ article.title }}</h3>
-                <p class="post-excerpt">{{ article.summary }}</p>
-                <a href="{{ SITEURL }}/{{ article.url }}" class="read-more">Leer más</a>
+                <span class="post-date">23 enero 2026</span>
+                <h3 class="post-title">¡Bienvenidas y bienvenidos al Club Informático! 🚀</h3>
+                <p class="post-excerpt"><p>Damos el puntapié inicial a Club Informático, un espacio para aprender, compartir y construir tecnología en comunidad, con buen ambiente, desafíos interesantes y muchas ganas de colaborar.</p></p>
+                <a href="../bienvenidas-y-bienvenidos-al-club-informatico.html" class="read-more">Leer más</a>
             </div>
         </article>
-        {% endfor %}
     </div>
 </section>
 
@@ -104,4 +128,53 @@
 </section>
 
 
-{% endblock %}
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>Club Informático</h3>
+                <p>
+                    ¡Bienvenido al punto de encuentro para los apasionados de la tecnología!
+                    Si te gustan la programación, la ciberseguridad, el hardware, el software libre, 
+                    o simplemente aprender cosas nuevas, este es tu lugar.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul class="footer-links">
+                    <li><a href="../">Inicio</a></li>
+                    <li><a href="..#latest-posts">Últimas Entradas</a></li>
+                    <li><a href="..#contact">Contacto</a></li>
+                    <li><a href="../categories.html">Categorías</a></li>
+                    <li><a href="../archives.html">Archivo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Categorías</h3>
+                <ul class="footer-links">
+                        <li>
+                            <a href="../category/comunidad.html">
+                                Comunidad
+                            </a>
+                        </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>&copy;  ClubInformatico</p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="../theme/js/main.js"></script>
+
+</body>
+</html>

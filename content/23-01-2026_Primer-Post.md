@@ -1,30 +1,65 @@
-Title: Biografía del Autor
-Date: 2022-09-25 19:24
-Tags: Biografía
-Category: Biografía
-Authors: Carlos Carrasco Varas
-Summary: Biografía de Carlos Carrasco
+Title: ¡Bienvenidas y bienvenidos al Club Informático! 🚀  
+Date: 2026-01-23 18:10
+Category: Comunidad  
+Authors: Carlos Carrasco  
+Summary: Damos el puntapié inicial a Club Informático, un espacio para aprender, compartir y construir tecnología en comunidad, con buen ambiente, desafíos interesantes y muchas ganas de colaborar.  
+Header_Image: images/post1.avif  
 
-# Biografía del Autor!
+---
 
-Bienvenidos a mi blog mi nombre es **Carlos Carrasco Varas**, soy Ingeniero Civil en Computación e informática y además tengo un Magíster en Informática y Ciencias de la Computación.
+## 👋 Hola, hola… ¡qué bueno verte por acá!
 
-Actualmente tengo 34 años y desde siempre me ha apasionado lo que es la computación. Todo lo referente al software y hardware. Uno de mis lenguajes favoritos de programación es Python y actualmente pertenezco a la coordinación de [Python Chile](https://pythonchile.cl/). 
+Si llegaste hasta aquí, déjame decirte algo importante: **este proyecto también es tuyo**.
 
-## Pasión
-Soy fanático de [Raspberry Pi](https://www.raspberrypi.org/), creo que desde el día que tuve una en mis manos mi vida cambio. Me encanto el hecho de ver como cobraba vida el hardware a través del software. Con el típico hola mundo del hardware que sería prender y apagar un led infinitamente.
+Club Informático nace con una idea muy simple pero poderosa crear una [gran comunidad](#) donde podamos [aprender, compartir conocimiento y construir cosas juntos](#), siempre en un ambiente [agradable, respetuoso y seguro](#).
 
-Desde ese día empece a ver cómo funcionaba [arduino](https://www.arduino.cc/) la cantidad de sensores que tenia y la facilidad con que se pueden enlazar. Hoy en día me gusta mucho experimentar con el módulo [ESP32](https://es.wikipedia.org/wiki/ESP32).
+Aquí se viene a [aprender y mejorar](#), en conjunto.
 
-## Actualidad
-En este momento de mi vida quisiera aportar con mi conocimiento y entregar tutoriales que estén actualizados ya que muchos se encuentran desactualizados y no siempre tenemos la suerte de contar con dicha información en español. Es por esa razón que he decidido iniciar este blog del desarrollador latinoamericano, mostrando como a mi me funciono. 
+---
 
-## Comunidad
-Quisiera indicar que mis redes sociales el día de hoy se encuentran abiertas y si quieren contactarse conmigo no duden en hacerlo.
+## 💡 ¿Cuál es la idea detrás del Club?
 
-Espero que la gran mayoría de mis proyectos se encuentren en mi [github](https://github.com/KrlitosForever) y si Ud. quieren mejorar el proyecto no duden en realizarlo.
+Queremos que este espacio sea:
 
-## Palabras finales
-Agradecer a todos aquellas personas que llegaron a mi blog con el objetivo de aprender o replicar un proyecto. Infinitas gracias.
+- Un punto de encuentro para personas curiosas por la tecnología  
+- Un lugar para compartir experiencias, dudas y soluciones
+- Una comunidad donde los proyectos se construyan entre todas y todos  
 
-> **Nota** es más te pediría que me enviaras un [tuit](https://twitter.com/Krlitos_Forever) diciendo *Hey Carlos! estoy en tu github pages!*
+No importa si estás comenzando o si llevas años en esto:  
+[si tienes ganas de aprender y compartir, ya encajas aquí.](#)
+
+---
+
+## 🛠️ Desafíos, proyectos y colaboración
+
+Habrá desafíos, ideas locas, proyectos pequeños, proyectos más ambiciosos…  
+y ojalá muchas ganas de meter las manos al teclado.
+
+Puedes colaborar de muchas formas:
+
+- Participando en desafíos
+- Aportando ideas
+- Ayudando a otras personas
+- Creando proyectos
+- O simplemente estando y aprendiendo todo suma.
+<br></br>
+---
+
+## 😊 Un mensaje personal
+
+Estoy [muy feliz](#) de sacar esta iniciativa adelante.  
+Club Informático es algo que llevaba tiempo dando vueltas y hoy por fin empieza a tomar forma.
+
+Mi mayor expectativa es que este espacio crezca con personas que compartan el mismo espíritu:  
+[respeto, colaboración y entusiasmo por aprender](#).
+
+---
+
+## 🚀 Esto recién comienza
+
+Gracias por estar aquí, por leer y por ser parte del inicio.  
+Lo que viene dependerá mucho de todas y todos nosotros.
+
+Bienvenidas y bienvenidos al **Club Informático**.  
+Ahora… ¡manos al teclado! 💻✨
+
