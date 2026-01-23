@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio | {{ SITENAME }}{% endblock %}
+
+{% block content %}
+
+<section class="carousel">
+    <div class="carousel-inner">
+        {% for article in articles[:3] %}
+        <div class="carousel-item {% if loop.first %}active{% endif %}">
+            <img src="{{ article.header_image | default('/theme/img/default.jpg') }}">
+            <div class="carousel-caption">
+                <h2>{{ article.title }}</h2>
+                <p>{{ article.summary }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section-title">Últimas Entradas</h2>
+    <div class="blog-posts">
+        {% for article in articles %}
+        <article class="post-card">
+            <img src="{{ article.header_image | default('/theme/img/default.jpg') }}"
+                 class="post-image">
+            <div class="post-content">
+                <span class="post-date">{{ article.date.strftime('%d %B %Y') }}</span>
+                <h3 class="post-title">{{ article.title }}</h3>
+                <p class="post-excerpt">{{ article.summary }}</p>
+                <a href="{{ SITEURL }}/{{ article.url }}" class="read-more">Leer más</a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

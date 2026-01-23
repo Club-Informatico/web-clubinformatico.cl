@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="container">
+    <h1>Categorías</h1>
+    <ul>
+        {% for category, articles in categories %}
+        <li>
+            <a href="{{ SITEURL }}/{{ category.url }}">
+                {{ category }} ({{ articles|length }})
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

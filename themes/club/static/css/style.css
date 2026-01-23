@@ -1,0 +1,449 @@
+:root {
+  --neon-pink: #ff00ff;
+  --neon-blue: #00ffff;
+  --neon-purple: #9d00ff;
+  --dark-bg: #0a0a0f;
+  --darker-bg: #050508;
+  --grid-color: rgba(0, 255, 255, 0.1);
+  --text-color: #e0e0ff;
+  --card-bg: rgba(10, 10, 20, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-color);
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 50px 50px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Estilos del navbar */
+.navbar {
+  background-color: rgba(5, 5, 10, 0.95);
+  border-bottom: 1px solid var(--neon-blue);
+  box-shadow: 0 0 15px var(--neon-blue);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+.logo span {
+  color: var(--neon-blue);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-links a:hover {
+  color: var(--neon-pink);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--neon-blue);
+  cursor: pointer;
+}
+
+/* Estilos del carrusel */
+.carousel {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--neon-purple);
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) contrast(1.2);
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
+  text-align: center;
+  background: rgba(5, 5, 10, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--neon-blue);
+  box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.carousel-caption h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.carousel-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.carousel-dot.active {
+  background-color: var(--neon-pink);
+  box-shadow: 0 0 10px var(--neon-pink);
+}
+
+/* Estilos de las secciones */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Sección del blog */
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.post-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.post-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--neon-pink);
+  box-shadow: 0 10px 25px rgba(255, 0, 255, 0.2);
+}
+
+.post-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 2px solid var(--neon-blue);
+}
+
+.post-content {
+  padding: 1.5rem;
+}
+
+.post-date {
+  color: var(--neon-blue);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.post-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--neon-blue);
+}
+
+.post-excerpt {
+  margin-bottom: 1.5rem;
+  color: #b0b0d0;
+}
+
+.read-more {
+  display: inline-block;
+  color: var(--neon-pink);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--neon-pink);
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.read-more:hover {
+  background-color: var(--neon-pink);
+  color: var(--dark-bg);
+  box-shadow: 0 0 15px var(--neon-pink);
+}
+
+/* Sección de redes sociales */
+.social-section {
+  background-color: rgba(5, 5, 15, 0.8);
+  padding: 4rem 0;
+  margin-bottom: 5rem;
+  border-top: 1px solid var(--neon-purple);
+  border-bottom: 1px solid var(--neon-purple);
+}
+
+.social-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.social-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 0.3s;
+  width: 120px;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  background-color: rgba(10, 10, 25, 0.6);
+  border: 1px solid transparent;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 20px var(--neon-blue);
+  color: var(--neon-blue);
+}
+
+.social-icon i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-icon span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Estilos del footer */
+.footer {
+  background-color: var(--darker-bg);
+  padding: 3rem 0 1.5rem;
+  border-top: 1px solid var(--neon-blue);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  color: var(--neon-blue);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-shadow: 0 0 5px var(--neon-blue);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: #a0a0d0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--neon-pink);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 255, 255, 0.2);
+  color: #8888cc;
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .carousel-caption h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(5, 5, 10, 0.98);
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 1.5rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s;
+    border-bottom: 1px solid var(--neon-blue);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .carousel {
+    height: 50vh;
+  }
+
+  .carousel-caption {
+    left: 5%;
+    right: 5%;
+    padding: 1.5rem;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel {
+    height: 40vh;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.5rem;
+  }
+
+  .social-icon {
+    width: 100px;
+    padding: 1rem 0.5rem;
+  }
+
+  .social-icon i {
+    font-size: 2rem;
+  }
+}
