@@ -1,10 +1,10 @@
+---
 Title: ¡Bienvenidas y bienvenidos al Club Informático! 🚀  
 Date: 2026-01-23 18:10
 Category: Comunidad  
 Authors: Carlos Carrasco  
 Summary: Damos el puntapié inicial a Club Informático, un espacio para aprender, compartir y construir tecnología en comunidad, con buen ambiente, desafíos interesantes y muchas ganas de colaborar.  
-Header_Image: images/post1.avif  
-
+Header_Image: images/2026/post1.avif  
 ---
 
 ## 👋 Hola, hola… ¡qué bueno verte por acá!
