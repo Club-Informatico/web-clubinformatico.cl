@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chile Sismos Tracker: los últimos temblores de Chile en un vistazo 🌎📈 | ClubInformatico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./theme/css/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    
+<header>
+<nav class="navbar">
+    <a href="./"><div class="logo">Club<span>Informático</span></div></a>
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="./">Inicio</a></li>
+        <li><a href=".#latest-posts">Últimas Entradas</a></li>
+        <li><a href=".#contact">Contacto</a></li>
+        <li><a href="./categories.html">Categorías</a></li>
+        <li><a href="./archives.html">Archivo</a></li>
+    </ul>
+</nav>
+</header>
+
+<main class="site-main">
+<section class="container">
+    <article class="article-page">
+        <h1>Chile Sismos Tracker: los últimos temblores de Chile en un vistazo 🌎📈</h1>
+        <p class="post-date">19 noviembre 2026</p>
+
+        <div class="article-content">
+            <h2>🌎 ¿Tembló o fue idea mía?</h2>
+<p>Si vives en Chile, conoces la escena: estás tranquilo en tu casa, sientes un movimiento y de inmediato aparece la pregunta de siempre…<br>
+<strong>¿tembló o fue idea mía?</strong> 🤔</p>
+<p>Y ahí parte la búsqueda en el celular. Con esa idea nace <strong>Chile Sismos Tracker</strong>, un proyecto del Club pensado para <a href="#">consultar la actividad sísmica de Chile de forma rápida, simple y amigable</a>.</p>
+<p>👉 <strong>Visítalo ahora:</strong> <a href="https://sismos.clubinformatico.cl/">sismos.clubinformatico.cl</a></p>
+<hr>
+<h2>📈 ¿De qué se trata?</h2>
+<p>Chile Sismos Tracker es una web que muestra los <strong>últimos 15 sismos registrados en Chile</strong>, cada uno en su propia tarjeta con la información que realmente importa:</p>
+<ul>
+<li>📏 <strong>Magnitud</strong> del sismo</li>
+<li>📅 <strong>Fecha y hora</strong> del evento</li>
+<li>🕳️ <strong>Profundidad</strong> en kilómetros</li>
+<li>📍 <strong>Ubicación</strong> (referencia geográfica)</li>
+</ul>
+<p>Sin menús enredados ni gráficos difíciles de leer: entras, miras y ya sabes qué pasó.</p>
+<hr>
+<h2>😊 vs 😨 El toque emoji</h2>
+<p>Lo que le da personalidad al proyecto son los <strong>emojis</strong>. Cada tarjeta trae uno según la magnitud del sismo:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Magnitud</th>
+<th style="text-align: center;">Emoji</th>
+<th style="text-align: left;">Interpretación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Menor a 5</td>
+<td style="text-align: center;">😊</td>
+<td style="text-align: left;">Tranquilidad, un temblor de los que estamos acostumbrados</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 o más</td>
+<td style="text-align: center;">😨</td>
+<td style="text-align: left;">Ojo, este ya se sintió fuerte</td>
+</tr>
+</tbody>
+</table>
+<p>Un detalle pequeño, pero que permite <a href="#">entender la intensidad de un vistazo</a>, sin tener que pensar en escalas ni números.</p>
+<hr>
+<h2>🛠️ ¿Cómo funciona por dentro?</h2>
+<p>Uno de los puntos más interesantes del proyecto es lo <strong>liviano</strong> que es. Todo vive en un único archivo <code>index.html</code>:</p>
+<ul>
+<li>🎨 <strong>HTML5 + CSS3 + Bootstrap</strong> para un diseño limpio y responsive</li>
+<li>⚡ <strong>JavaScript</strong> que, al cargar la página, consulta una <strong>API pública de sismos</strong></li>
+<li>🧩 Por cada sismo recibido se arma dinámicamente una tarjeta en pantalla</li>
+<li>🌐 Publicado con <strong>GitHub Pages</strong> y un dominio propio del Club</li>
+</ul>
+<p>La lógica es tan directa como esto:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://api.gael.cloud/general/public/sismos&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">data</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">sismo</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">emoji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sismo</span><span class="p">.</span><span class="nx">Magnitud</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;😨&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;😊&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="c1">// ...se crea una tarjeta con magnitud, fecha, profundidad y ubicación</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">});</span>
+</code></pre></div>
+
+<p>Cada vez que recargas la página obtienes la información más reciente. 🔄</p>
+<p>Es un ejemplo perfecto para quienes están aprendiendo a <a href="#">consumir APIs desde el navegador con <code>fetch</code></a> y quieren ver resultados reales en pocas líneas de código.</p>
+<hr>
+<h2>💻 Pruébalo en tu equipo</h2>
+<p>No necesitas instalar nada. Solo clona el repositorio:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/KrlitosForever/Chile-Sismos-Tracker.git
+</code></pre></div>
+
+<p>y abre el archivo <code>index.html</code> en tu navegador favorito. ✅</p>
+<hr>
+<h2>🤝 Súmate al proyecto</h2>
+<p>Chile Sismos Tracker es <strong>open source</strong> bajo la licencia <strong>GNU GPL v3</strong>: puedes usarlo, estudiarlo y modificarlo, siempre que tus mejoras también sean públicas.</p>
+<p>¿Ideas para llevarlo al siguiente nivel? Se nos ocurren varias:</p>
+<ul>
+<li>🗺️ Un <strong>mapa</strong> con la ubicación de cada sismo</li>
+<li>🎚️ Más <strong>niveles de emojis</strong> según la magnitud</li>
+<li>🔔 <strong>Notificaciones</strong> cuando ocurra un sismo fuerte</li>
+<li>📊 <strong>Gráficos</strong> con la actividad de los últimos días</li>
+</ul>
+<p>Si te animas, haz un <strong>fork</strong>, crea tu rama, programa tu idea y envía un <strong>Pull Request</strong>. <a href="https://github.com/KrlitosForever/Chile-Sismos-Tracker">¡Toda contribución suma!</a></p>
+<hr>
+<h2>🚀 La próxima vez que tiemble…</h2>
+<p>…ya sabes dónde mirar. 😉</p>
+<ul>
+<li>🌐 <strong>Web:</strong> <a href="https://sismos.clubinformatico.cl/">sismos.clubinformatico.cl</a></li>
+<li>💻 <strong>Repositorio:</strong> <a href="https://github.com/KrlitosForever/Chile-Sismos-Tracker">github.com/KrlitosForever/Chile-Sismos-Tracker</a></li>
+</ul>
+<p>Compártelo con tu familia y amistades, y cuéntanos qué te parece.<br>
+¡Nos vemos en el próximo proyecto! 💻✨</p>
+        </div>
+
+        <p>
+            Categoría:
+            <a href="./category/proyectos.html">
+                Proyectos
+            </a>
+        </p>
+    </article>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>Club Informático</h3>
+                <p>
+                    ¡Bienvenido al punto de encuentro para los apasionados de la tecnología!
+                    Si te gustan la programación, la ciberseguridad, el hardware, el software libre, 
+                    o simplemente aprender cosas nuevas, este es tu lugar.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul class="footer-links">
+                    <li><a href="./">Inicio</a></li>
+                    <li><a href=".#latest-posts">Últimas Entradas</a></li>
+                    <li><a href=".#contact">Contacto</a></li>
+                    <li><a href="./categories.html">Categorías</a></li>
+                    <li><a href="./archives.html">Archivo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Categorías</h3>
+                <ul class="footer-links">
+                        <li>
+                            <a href="./category/comunidad.html">
+                                Comunidad
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./category/proyectos.html">
+                                Proyectos
+                            </a>
+                        </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>&copy;  ClubInformatico</p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="./theme/js/main.js"></script>
+
+</body>
+</html>

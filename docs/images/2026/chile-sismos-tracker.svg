@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Chile Sismos Tracker: últimos sismos registrados en Chile">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14213d"/>
+      <stop offset="1" stop-color="#0a0f1f"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffb347" stop-opacity="0.15"/>
+      <stop offset="0.5" stop-color="#ff5e3a"/>
+      <stop offset="1" stop-color="#ffb347" stop-opacity="0.15"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <!-- Cuadrícula tipo sismógrafo -->
+  <g stroke="#ffffff" stroke-opacity="0.05" stroke-width="1">
+    <path d="M0 100H1200M0 200H1200M0 300H1200M0 400H1200M0 500H1200M0 600H1200M0 700H1200"/>
+    <path d="M100 0V800M200 0V800M300 0V800M400 0V800M500 0V800M600 0V800M700 0V800M800 0V800M900 0V800M1000 0V800M1100 0V800"/>
+  </g>
+
+  <!-- Ondas del epicentro -->
+  <g transform="translate(600 250)" fill="none" stroke="#ff5e3a">
+    <circle r="40"  stroke-opacity="0.9" stroke-width="5"/>
+    <circle r="85"  stroke-opacity="0.6" stroke-width="4"/>
+    <circle r="135" stroke-opacity="0.35" stroke-width="3"/>
+    <circle r="190" stroke-opacity="0.18" stroke-width="2"/>
+    <circle r="250" stroke-opacity="0.08" stroke-width="2"/>
+  </g>
+  <circle cx="600" cy="250" r="14" fill="#ff5e3a"/>
+
+  <!-- Sismograma -->
+  <polyline fill="none" stroke="url(#wave)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"
+    points="0,250 120,250 160,246 190,256 220,240 250,262 280,238 320,265 360,230 400,280 440,200 470,320 500,150 530,360 560,110 590,390 620,130 650,350 680,180 710,310 740,215 780,285 820,232 860,262 900,244 940,256 980,248 1040,252 1200,250"/>
+
+  <!-- Título -->
+  <text x="600" y="545" text-anchor="middle" fill="#ffffff"
+        font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="66" font-weight="800">Chile Sismos Tracker</text>
+  <text x="600" y="592" text-anchor="middle" fill="#ffffff" fill-opacity="0.7"
+        font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="26">Los últimos 15 sismos de Chile en un vistazo</text>
+
+  <!-- Tarjetas de sismos -->
+  <g font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" filter="url(#shadow)">
+    <g transform="translate(225 640)">
+      <rect width="230" height="110" rx="18" fill="#1e2b4d" stroke="#ffffff" stroke-opacity="0.08"/>
+      <text x="22" y="48" fill="#ffffff" font-size="30" font-weight="700">M 3.4</text>
+      <text x="22" y="82" fill="#ffffff" fill-opacity="0.6" font-size="18">Profundidad 35 km</text>
+      <text x="200" y="55" text-anchor="end" font-size="40">😊</text>
+    </g>
+    <g transform="translate(485 640)">
+      <rect width="230" height="110" rx="18" fill="#3a1f2b" stroke="#ff5e3a" stroke-opacity="0.8" stroke-width="2"/>
+      <text x="22" y="48" fill="#ffffff" font-size="30" font-weight="700">M 5.6</text>
+      <text x="22" y="82" fill="#ffffff" fill-opacity="0.6" font-size="18">Profundidad 48 km</text>
+      <text x="200" y="55" text-anchor="end" font-size="40">😨</text>
+    </g>
+    <g transform="translate(745 640)">
+      <rect width="230" height="110" rx="18" fill="#1e2b4d" stroke="#ffffff" stroke-opacity="0.08"/>
+      <text x="22" y="48" fill="#ffffff" font-size="30" font-weight="700">M 2.9</text>
+      <text x="22" y="82" fill="#ffffff" fill-opacity="0.6" font-size="18">Profundidad 12 km</text>
+      <text x="200" y="55" text-anchor="end" font-size="40">😊</text>
+    </g>
+  </g>
+</svg>
