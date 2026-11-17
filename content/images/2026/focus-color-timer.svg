@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Focus Color Timer: temporizador pomodoro con colores">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b1f3b"/>
+      <stop offset="1" stop-color="#0d1024"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff5f6d"/>
+      <stop offset="0.35" stop-color="#ffc371"/>
+      <stop offset="0.7" stop-color="#2ee6a6"/>
+      <stop offset="1" stop-color="#4f8bff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <!-- Bloques de estudio de colores (con un descanso blanco) -->
+  <g opacity="0.95">
+    <rect x="0"    y="0" width="150" height="800" fill="#ff5f6d"/>
+    <rect x="150"  y="0" width="150" height="800" fill="#ffa64d"/>
+    <rect x="300"  y="0" width="150" height="800" fill="#ffd84d"/>
+    <rect x="450"  y="0" width="150" height="800" fill="#f4f4f8"/>
+    <rect x="600"  y="0" width="150" height="800" fill="#2ee6a6"/>
+    <rect x="750"  y="0" width="150" height="800" fill="#29c7e8"/>
+    <rect x="900"  y="0" width="150" height="800" fill="#4f8bff"/>
+    <rect x="1050" y="0" width="150" height="800" fill="#a463f5"/>
+  </g>
+  <!-- Velo oscuro para dar contraste -->
+  <rect width="1200" height="800" fill="#0d1024" opacity="0.35"/>
+
+  <!-- Tarjeta central -->
+  <g filter="url(#shadow)">
+    <rect x="250" y="110" width="700" height="580" rx="40" fill="url(#bg)"/>
+  </g>
+
+  <!-- Reloj -->
+  <g transform="translate(600 330)">
+    <circle r="150" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="22"/>
+    <circle r="150" fill="none" stroke="url(#ring)" stroke-width="22" stroke-linecap="round"
+            stroke-dasharray="942.5" stroke-dashoffset="250" transform="rotate(-90)"/>
+    <text y="22" text-anchor="middle" fill="#ffffff"
+          font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="76" font-weight="700"
+          letter-spacing="2">25:00</text>
+    <text y="70" text-anchor="middle" fill="#ffffff" fill-opacity="0.6"
+          font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" letter-spacing="4">BLOQUE 3 / 8</text>
+  </g>
+
+  <!-- Título -->
+  <text x="600" y="580" text-anchor="middle" fill="#ffffff"
+        font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="58" font-weight="800">Focus Color Timer</text>
+  <text x="600" y="625" text-anchor="middle" fill="#ffffff" fill-opacity="0.7"
+        font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24">Estudia al ritmo de los colores</text>
+
+  <!-- Indicador de progreso -->
+  <g transform="translate(600 660)">
+    <circle cx="-105" r="9" fill="#ff5f6d"/>
+    <circle cx="-75"  r="9" fill="#ffa64d"/>
+    <circle cx="-45"  r="9" fill="#ffd84d"/>
+    <circle cx="-15"  r="9" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="15"   r="9" fill="#ffffff" fill-opacity="0.2"/>
+    <circle cx="45"   r="9" fill="#ffffff" fill-opacity="0.2"/>
+    <circle cx="75"   r="9" fill="#ffffff" fill-opacity="0.2"/>
+    <circle cx="105"  r="9" fill="#ffffff" fill-opacity="0.2"/>
+  </g>
+</svg>
