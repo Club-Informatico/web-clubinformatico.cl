@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Temporizador para presentaciones: controla tu tiempo con un semáforo 🚦⏱️ | ClubInformatico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./theme/css/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    
+<header>
+<nav class="navbar">
+    <a href="./"><div class="logo">Club<span>Informático</span></div></a>
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="./">Inicio</a></li>
+        <li><a href=".#latest-posts">Últimas Entradas</a></li>
+        <li><a href=".#contact">Contacto</a></li>
+        <li><a href="./categories.html">Categorías</a></li>
+        <li><a href="./archives.html">Archivo</a></li>
+    </ul>
+</nav>
+</header>
+
+<main class="site-main">
+<section class="container">
+    <article class="article-page">
+        <h1>Temporizador para presentaciones: controla tu tiempo con un semáforo 🚦⏱️</h1>
+        <p class="post-date">21 noviembre 2026</p>
+
+        <div class="article-content">
+            <h2>🎤 "Te quedan cinco minutos…"</h2>
+<p>Si alguna vez has dado una charla, sabes lo difícil que es manejar el tiempo.<br>
+Estás concentrado en tu tema, con los nervios a flor de piel, y de pronto alguien del público te hace señas porque <strong>ya te pasaste</strong>. 😅</p>
+<p>Para evitar ese momento incómodo nace el <strong>Temporizador para presentaciones</strong>, un proyecto del Club pensado para que <a href="#">quien expone pueda controlar su tiempo sin perder el hilo</a>.</p>
+<p>👉 <strong>Úsalo ahora:</strong> <a href="https://temporizador-presentaciones.clubinformatico.cl">temporizador-presentaciones.clubinformatico.cl</a></p>
+<hr>
+<h2>🚦 ¿De qué se trata?</h2>
+<p>Es un <strong>temporizador web de cuenta regresiva</strong> que ocupa toda la pantalla y funciona como un <strong>semáforo</strong>: el color de fondo cambia a medida que avanza el tiempo.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Etapa</th>
+<th style="text-align: center;">Color</th>
+<th style="text-align: left;">Qué significa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Primer tercio</td>
+<td style="text-align: center;">🟢 Verde</td>
+<td style="text-align: left;">Vas bien, tienes tiempo de sobra</td>
+</tr>
+<tr>
+<td style="text-align: center;">Segundo tercio</td>
+<td style="text-align: center;">🟡 Amarillo</td>
+<td style="text-align: left;">Ve preparando las ideas principales</td>
+</tr>
+<tr>
+<td style="text-align: center;">Último tercio</td>
+<td style="text-align: center;">🔴 Rojo</td>
+<td style="text-align: left;">¡Hora de cerrar!</td>
+</tr>
+</tbody>
+</table>
+<p>La gracia es que <a href="#">no necesitas leer los números para saber cómo vas</a>. Basta una mirada rápida a la pantalla, aunque estés al otro lado del escenario.</p>
+<hr>
+<h2>✨ Funcionalidades</h2>
+<ul>
+<li>⏱️ <strong>Cuenta regresiva configurable</strong> (por defecto, 15 minutos)</li>
+<li>🎨 <strong>Cambio progresivo de colores</strong>: verde, amarillo y rojo</li>
+<li>🔢 <strong>Números grandes y legibles</strong> a pantalla completa</li>
+<li>🌈 <strong>Transiciones suaves</strong> entre un color y otro</li>
+<li>💬 <strong>Ventana emergente</strong> para elegir la duración al abrir la página</li>
+</ul>
+<hr>
+<h2>🎮 ¿Cómo se usa?</h2>
+<ol>
+<li>Abre la página y aparecerá una ventana para <strong>configurar el tiempo</strong> 💬</li>
+<li>Escribe los <strong>minutos</strong> de tu presentación (por ejemplo, <code>15</code>) ✍️</li>
+<li>El temporizador <strong>parte de inmediato</strong> ▶️</li>
+<li>Proyéctalo o déjalo en una pantalla que puedas ver mientras hablas 🖥️</li>
+<li>¡Deja que los colores te avisen cómo vas! 🚦</li>
+</ol>
+<blockquote>
+<p>💡 <strong>Pro tip:</strong> ideal para meetups, clases, defensas de proyectos, hackatones o cualquier evento con varias personas exponiendo en tiempos acotados.</p>
+</blockquote>
+<hr>
+<h2>🛠️ ¿Cómo funciona por dentro?</h2>
+<p>El proyecto es pequeño y muy fácil de entender. Está hecho con <strong>HTML5, CSS3 y JavaScript (ES6)</strong>, repartido en tres archivos: <code>index.html</code>, <code>styles.css</code> y <code>script.js</code>.</p>
+<p>El corazón del temporizador es una función que calcula <strong>qué fracción del tiempo ya pasó</strong> y, según eso, elige el color:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">updateBackgroundColor</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">elapsed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">totalTime</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">remainingTime</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">fraction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">elapsed</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">totalTime</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">fraction</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">1</span><span class="o">/</span><span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">fraction</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">2</span><span class="o">/</span><span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;yellow&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Un <code>setInterval</code> descuenta un segundo cada vez, actualiza los números y llama a esta función. Simple y efectivo. ✅</p>
+<p>Es un gran ejemplo para quienes están comenzando con JavaScript y quieren practicar <a href="#">temporizadores, manipulación del DOM y estilos dinámicos</a>.</p>
+<hr>
+<h2>🎨 Hazlo tuyo</h2>
+<p>Personalizarlo es muy sencillo:</p>
+<ul>
+<li>⏳ Cambia la duración por defecto en la variable <code>totalTime</code> de <code>script.js</code></li>
+<li>🌈 Elige otros colores en la función <code>updateBackgroundColor()</code></li>
+<li>🔠 Ajusta el tamaño de los números en <code>styles.css</code></li>
+</ul>
+<p>Y para probarlo en tu equipo no necesitas instalar nada:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/KrlitosForever/Temporizador-presentaciones.git
+</code></pre></div>
+
+<p>Luego abre el archivo <code>index.html</code> en tu navegador favorito. ¡Listo! 🚀</p>
+<hr>
+<h2>🤝 Súmate al proyecto</h2>
+<p>¿Se te ocurre cómo mejorarlo? Algunas ideas para empezar:</p>
+<ul>
+<li>⏸️ Botones para <strong>pausar y reiniciar</strong></li>
+<li>🔊 Un <strong>sonido</strong> cuando el tiempo se acabe</li>
+<li>⏰ Mostrar el <strong>tiempo extra</strong> cuando alguien se pase</li>
+<li>🎚️ Elegir <strong>en qué momento</strong> cambia cada color</li>
+</ul>
+<p>Las contribuciones son bienvenidas: abre un <strong>issue</strong> o envía un <strong>Pull Request</strong> en el <a href="https://github.com/KrlitosForever/Temporizador-presentaciones">repositorio del proyecto</a>.</p>
+<hr>
+<h2>🚀 Tu próxima charla, a tiempo</h2>
+<p>La próxima vez que te toque exponer, deja que el semáforo te acompañe. 🚦</p>
+<ul>
+<li>🌐 <strong>Web:</strong> <a href="https://temporizador-presentaciones.clubinformatico.cl">temporizador-presentaciones.clubinformatico.cl</a></li>
+<li>💻 <strong>Repositorio:</strong> <a href="https://github.com/KrlitosForever/Temporizador-presentaciones">github.com/KrlitosForever/Temporizador-presentaciones</a></li>
+</ul>
+<p>Compártelo con quienes organizan eventos y cuéntanos cómo te fue.<br>
+¡Nos vemos en el próximo proyecto! 💻✨</p>
+        </div>
+
+        <p>
+            Categoría:
+            <a href="./category/proyectos.html">
+                Proyectos
+            </a>
+        </p>
+    </article>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>Club Informático</h3>
+                <p>
+                    ¡Bienvenido al punto de encuentro para los apasionados de la tecnología!
+                    Si te gustan la programación, la ciberseguridad, el hardware, el software libre, 
+                    o simplemente aprender cosas nuevas, este es tu lugar.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul class="footer-links">
+                    <li><a href="./">Inicio</a></li>
+                    <li><a href=".#latest-posts">Últimas Entradas</a></li>
+                    <li><a href=".#contact">Contacto</a></li>
+                    <li><a href="./categories.html">Categorías</a></li>
+                    <li><a href="./archives.html">Archivo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Categorías</h3>
+                <ul class="footer-links">
+                        <li>
+                            <a href="./category/comunidad.html">
+                                Comunidad
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./category/proyectos.html">
+                                Proyectos
+                            </a>
+                        </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>&copy;  ClubInformatico</p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="./theme/js/main.js"></script>
+
+</body>
+</html>
