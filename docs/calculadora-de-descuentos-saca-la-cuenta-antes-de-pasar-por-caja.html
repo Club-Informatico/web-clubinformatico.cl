@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de descuentos: saca la cuenta antes de pasar por caja 🛍️💸 | ClubInformatico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./theme/css/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    
+<header>
+<nav class="navbar">
+    <a href="./"><div class="logo">Club<span>Informático</span></div></a>
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="./">Inicio</a></li>
+        <li><a href=".#latest-posts">Últimas Entradas</a></li>
+        <li><a href=".#contact">Contacto</a></li>
+        <li><a href="./categories.html">Categorías</a></li>
+        <li><a href="./archives.html">Archivo</a></li>
+    </ul>
+</nav>
+</header>
+
+<main class="site-main">
+<section class="container">
+    <article class="article-page">
+        <h1>Calculadora de descuentos: saca la cuenta antes de pasar por caja 🛍️💸</h1>
+        <p class="post-date">22 noviembre 2026</p>
+
+        <div class="article-content">
+            <h2>🛍️ "¿Y cuánto queda con el 35%?"</h2>
+<p>Estás en el mall, ves un cartel gigante de <strong>"35% OFF"</strong> y empieza el cálculo mental…<br>
+¿Cuánto era el 10%? ¿Lo multiplico por tres y medio? ¿Y si mejor saco el celular? 😅</p>
+<p>Y si andas con tu pareja, la pregunta llega sí o sí. Para esos momentos nace la <strong>Calculadora de descuentos</strong>, un proyecto del Club pensado para <a href="#">saber al tiro cuánto vas a pagar, sin sacar cuentas a mano</a>.</p>
+<p>👉 <strong>Pruébala ahora:</strong> <a href="https://calculadora-descuentos.clubinformatico.cl/">calculadora-descuentos.clubinformatico.cl</a></p>
+<hr>
+<h2>💸 ¿De qué se trata?</h2>
+<p>Es una <strong>app web muy simple</strong> con solo dos campos:</p>
+<ol>
+<li>🏷️ <strong>Precio original</strong> del producto</li>
+<li>📉 <strong>Porcentaje de descuento</strong></li>
+</ol>
+<p>Y listo: mientras escribes, la app te muestra el <strong>precio final con descuento</strong>. No hay botón de "calcular" ni pasos extra. ⚡</p>
+<blockquote>
+<p>Ejemplo: un producto de <strong>$49.990</strong> con <strong>35%</strong> de descuento queda en <strong>$32.493,5</strong>. 😎</p>
+</blockquote>
+<hr>
+<h2>✨ Funcionalidades</h2>
+<ul>
+<li>⚡ <strong>Cálculo automático</strong> mientras escribes</li>
+<li>💰 <strong>Formato con separador de miles</strong> para leer los precios sin enredarse</li>
+<li>📱 <strong>Diseño responsive</strong>, pensado especialmente para el celular</li>
+<li>🖥️ <strong>Interfaz limpia e intuitiva</strong>, inspirada en el estilo de iOS</li>
+<li>📲 <strong>Se puede instalar</strong> en tu pantalla de inicio como si fuera una app</li>
+<li>📴 <strong>Funciona sin internet</strong>, ideal para el subterráneo del mall</li>
+</ul>
+<hr>
+<h2>📲 Una app que vive en tu celular</h2>
+<p>Esta es la parte más entretenida del proyecto: la calculadora es una <strong>PWA</strong> (<em>Progressive Web App</em>).</p>
+<p>¿Qué significa eso? Que además de usarla desde el navegador, puedes <strong>instalarla en tu teléfono</strong> y abrirla desde la pantalla de inicio, a pantalla completa, como cualquier otra app. 🙌</p>
+<p>Para lograrlo, el proyecto incluye dos piezas clave:</p>
+<ul>
+<li>📄 <strong><code>manifest.webmanifest</code></strong>: define el nombre, los íconos y los colores de la app al instalarla</li>
+<li>⚙️ <strong><code>sw.js</code></strong> (<em>Service Worker</em>): guarda la app en caché para que <strong>funcione sin conexión</strong></li>
+</ul>
+<p><strong>¿Cómo instalarla?</strong></p>
+<ul>
+<li>🍎 <strong>iPhone (Safari):</strong> botón <em>Compartir</em> → <em>Agregar a inicio</em></li>
+<li>🤖 <strong>Android (Chrome):</strong> menú ⋮ → <em>Instalar app</em> o <em>Agregar a pantalla principal</em></li>
+</ul>
+<hr>
+<h2>🛠️ ¿Cómo funciona por dentro?</h2>
+<p>Está construida con <strong>HTML5, CSS3 y JavaScript (ES6)</strong>, sin frameworks ni dependencias.</p>
+<p>El cálculo es tan simple como efectivo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">descuentoAplicado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">precio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="nx">descuento</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">100</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">precioFinal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">precio</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">descuentoAplicado</span><span class="p">;</span>
+
+<span class="c1">// Formateamos el precio final con separadores de miles</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">precioFormateado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">precioFinal</span><span class="p">.</span><span class="nx">toLocaleString</span><span class="p">(</span><span class="s1">&#39;es-ES&#39;</span><span class="p">);</span>
+</code></pre></div>
+
+<p>Cada campo tiene un evento <code>oninput</code>, así que el resultado se actualiza <strong>con cada tecla</strong>. Y si alguien escribe valores negativos, la app avisa. ✅</p>
+<p>Es un excelente proyecto para quienes quieren dar el salto de una web común a una <a href="#">Progressive Web App con soporte offline</a>, viendo un ejemplo real y fácil de entender.</p>
+<hr>
+<h2>💻 Pruébala en tu equipo</h2>
+<p>No necesitas instalar nada. Clona el repositorio:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/KrlitosForever/Calculadora-descuentos.git
+<span class="nb">cd</span><span class="w"> </span>Calculadora-descuentos
+</code></pre></div>
+
+<p>y abre <code>index.html</code> en tu navegador favorito. 🚀</p>
+<blockquote>
+<p>ℹ️ Para probar la instalación y el modo offline, el Service Worker necesita servirse desde <code>localhost</code> o HTTPS. Un <code>python -m http.server</code> en la carpeta del proyecto es suficiente.</p>
+</blockquote>
+<hr>
+<h2>🤝 Súmate al proyecto</h2>
+<p>La Calculadora de descuentos es <strong>open source</strong> bajo la licencia <strong>GNU GPL v3</strong>: puedes usarla, estudiarla y modificarla, siempre que tus mejoras también sean públicas.</p>
+<p>Algunas ideas para llevarla más lejos:</p>
+<ul>
+<li>💵 Mostrar <strong>cuánto te ahorras</strong> además del precio final</li>
+<li>➕ Aplicar <strong>descuentos acumulados</strong> (por ejemplo, 30% + 10% extra)</li>
+<li>🧾 Llevar una <strong>lista de compras</strong> con el total</li>
+<li>🌙 Agregar un <strong>modo oscuro</strong></li>
+</ul>
+<p>¿Te animas? Haz un <strong>fork</strong>, crea tu rama, programa tu idea y abre un <strong>Pull Request</strong>. <a href="https://github.com/KrlitosForever/Calculadora-descuentos">¡Toda contribución suma!</a></p>
+<hr>
+<h2>🚀 La próxima vez que veas un "OFF"…</h2>
+<p>…ya sabes qué hacer. 😉</p>
+<ul>
+<li>🌐 <strong>Web:</strong> <a href="https://calculadora-descuentos.clubinformatico.cl/">calculadora-descuentos.clubinformatico.cl</a></li>
+<li>💻 <strong>Repositorio:</strong> <a href="https://github.com/KrlitosForever/Calculadora-descuentos">github.com/KrlitosForever/Calculadora-descuentos</a></li>
+</ul>
+<p>Instálala en tu celular, compártela con tu familia y, si te gusta, regálale una ⭐ en GitHub.<br>
+¡Nos vemos en el próximo proyecto! 💻✨</p>
+        </div>
+
+        <p>
+            Categoría:
+            <a href="./category/proyectos.html">
+                Proyectos
+            </a>
+        </p>
+    </article>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>Club Informático</h3>
+                <p>
+                    ¡Bienvenido al punto de encuentro para los apasionados de la tecnología!
+                    Si te gustan la programación, la ciberseguridad, el hardware, el software libre, 
+                    o simplemente aprender cosas nuevas, este es tu lugar.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul class="footer-links">
+                    <li><a href="./">Inicio</a></li>
+                    <li><a href=".#latest-posts">Últimas Entradas</a></li>
+                    <li><a href=".#contact">Contacto</a></li>
+                    <li><a href="./categories.html">Categorías</a></li>
+                    <li><a href="./archives.html">Archivo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Categorías</h3>
+                <ul class="footer-links">
+                        <li>
+                            <a href="./category/comunidad.html">
+                                Comunidad
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./category/proyectos.html">
+                                Proyectos
+                            </a>
+                        </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>&copy;  ClubInformatico</p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="./theme/js/main.js"></script>
+
+</body>
+</html>
