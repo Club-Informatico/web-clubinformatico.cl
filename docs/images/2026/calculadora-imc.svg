@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Calculadora IMC: indicador de índice de masa corporal">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e3b43"/>
+      <stop offset="1" stop-color="#07191f"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g fill="#34C759" opacity="0.07">
+    <circle cx="1100" cy="90" r="200"/>
+    <circle cx="90" cy="760" r="180"/>
+  </g>
+
+  <!-- Título -->
+  <g font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="90" y="290" fill="#ffffff" font-size="72" font-weight="800">Calculadora</text>
+    <text x="90" y="372" fill="#34C759" font-size="72" font-weight="800">IMC</text>
+    <text x="90" y="428" fill="#ffffff" fill-opacity="0.75" font-size="26">Tu índice de masa corporal en segundos</text>
+    <g font-size="20" font-weight="600">
+      <rect x="90" y="470" width="150" height="44" rx="22" fill="#ffffff" fill-opacity="0.12"/>
+      <text x="165" y="499" text-anchor="middle" fill="#ffffff">🍏 Estilo iOS</text>
+      <rect x="254" y="470" width="160" height="44" rx="22" fill="#ffffff" fill-opacity="0.12"/>
+      <text x="334" y="499" text-anchor="middle" fill="#ffffff">🌙 Modo oscuro</text>
+      <rect x="428" y="470" width="160" height="44" rx="22" fill="#ffffff" fill-opacity="0.12"/>
+      <text x="508" y="499" text-anchor="middle" fill="#ffffff">📴 100% offline</text>
+    </g>
+  </g>
+
+  <!-- Tarjeta con indicador -->
+  <g filter="url(#shadow)">
+    <rect x="660" y="120" width="450" height="560" rx="40" fill="#1c1c1e"/>
+  </g>
+
+  <g font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="885" y="190" text-anchor="middle" fill="#ffffff" fill-opacity="0.6" font-size="22" font-weight="600" letter-spacing="3">TU IMC</text>
+
+    <!-- Indicador semicircular: centro (885, 420), radio 160 -->
+    <g fill="none" stroke-width="30">
+      <path d="M725.0 420.0 A160 160 0 0 1 738.2 356.5" stroke="#FF9500"/>
+      <path d="M742.4 347.4 A160 160 0 0 1 830.8 269.5" stroke="#34C759"/>
+      <path d="M840.4 266.4 A160 160 0 0 1 929.6 266.4" stroke="#FFCC00"/>
+      <path d="M939.2 269.5 A160 160 0 0 1 1011.4 321.9" stroke="#FF3B30"/>
+      <path d="M1017.3 330.1 A160 160 0 0 1 1045.0 420.0" stroke="#8B0000"/>
+    </g>
+
+    <!-- Aguja apuntando a 22,5 -->
+    <g transform="translate(885 420) rotate(-36)">
+      <path d="M-6 0 L0 -120 L6 0 Z" fill="#ffffff"/>
+    </g>
+    <circle cx="885" cy="420" r="16" fill="#ffffff"/>
+    <circle cx="885" cy="420" r="7" fill="#1c1c1e"/>
+
+    <text x="885" y="520" text-anchor="middle" fill="#34C759" font-size="84" font-weight="800">22,5</text>
+    <rect x="800" y="548" width="170" height="44" rx="22" fill="#34C759" fill-opacity="0.18"/>
+    <text x="885" y="578" text-anchor="middle" fill="#34C759" font-size="22" font-weight="700">Saludable</text>
+
+    <text x="885" y="638" text-anchor="middle" fill="#ffffff" fill-opacity="0.5" font-size="18">170 cm · 65 kg</text>
+  </g>
+</svg>
