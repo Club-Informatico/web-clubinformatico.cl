@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Farmacia de Turno: farmacias de turno cerca de ti en un mapa">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2a3d"/>
+      <stop offset="1" stop-color="#081521"/>
+    </linearGradient>
+    <linearGradient id="cross" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34C759"/>
+      <stop offset="1" stop-color="#1fa64a"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <clipPath id="mapClip">
+      <rect x="640" y="110" width="470" height="580" rx="36"/>
+    </clipPath>
+  </defs>
+
+  <!-- Fondo nocturno -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g fill="#ffffff">
+    <circle cx="120" cy="80"  r="2"   opacity="0.6"/>
+    <circle cx="310" cy="50"  r="1.5" opacity="0.5"/>
+    <circle cx="520" cy="95"  r="2"   opacity="0.4"/>
+    <circle cx="60"  cy="200" r="1.5" opacity="0.4"/>
+    <circle cx="420" cy="180" r="1.5" opacity="0.5"/>
+    <circle cx="1160" cy="60" r="2"   opacity="0.5"/>
+    <circle cx="250" cy="740" r="1.5" opacity="0.4"/>
+  </g>
+  <!-- Luna -->
+  <circle cx="560" cy="150" r="34" fill="#ffe9a8" opacity="0.9"/>
+  <circle cx="576" cy="140" r="30" fill="#0f2a3d"/>
+
+  <!-- Cruz de farmacia -->
+  <g transform="translate(90 170)" filter="url(#shadow)">
+    <rect width="150" height="150" rx="34" fill="url(#cross)"/>
+    <path d="M60 30 H90 V60 H120 V90 H90 V120 H60 V90 H30 V60 H60 Z" fill="#ffffff"/>
+  </g>
+
+  <!-- Título -->
+  <g font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="90" y="410" fill="#ffffff" font-size="66" font-weight="800">Farmacia</text>
+    <text x="90" y="484" fill="#ffffff" font-size="66" font-weight="800">de Turno</text>
+    <text x="90" y="536" fill="#ffffff" fill-opacity="0.75" font-size="25">La farmacia abierta más cercana, en un mapa</text>
+    <g font-size="20" font-weight="600">
+      <rect x="90" y="575" width="160" height="44" rx="22" fill="#ffffff" fill-opacity="0.12"/>
+      <text x="170" y="604" text-anchor="middle" fill="#ffffff">📍 Cerca de ti</text>
+      <rect x="264" y="575" width="176" height="44" rx="22" fill="#ffffff" fill-opacity="0.12"/>
+      <text x="352" y="604" text-anchor="middle" fill="#ffffff">🏛️ Datos MINSAL</text>
+      <rect x="454" y="575" width="140" height="44" rx="22" fill="#ffffff" fill-opacity="0.12"/>
+      <text x="524" y="604" text-anchor="middle" fill="#ffffff">📲 Instalable</text>
+    </g>
+  </g>
+
+  <!-- Mapa -->
+  <g filter="url(#shadow)">
+    <rect x="640" y="110" width="470" height="580" rx="36" fill="#eef1f4"/>
+  </g>
+  <g clip-path="url(#mapClip)">
+    <!-- Manzanas -->
+    <g fill="#e0e5ea">
+      <rect x="650" y="120" width="120" height="110" rx="8"/>
+      <rect x="800" y="120" width="140" height="110" rx="8"/>
+      <rect x="970" y="120" width="140" height="110" rx="8"/>
+      <rect x="650" y="260" width="120" height="150" rx="8"/>
+      <rect x="800" y="260" width="140" height="150" rx="8"/>
+      <rect x="970" y="260" width="140" height="150" rx="8"/>
+      <rect x="650" y="440" width="120" height="120" rx="8"/>
+      <rect x="800" y="440" width="140" height="120" rx="8"/>
+      <rect x="970" y="440" width="140" height="120" rx="8"/>
+    </g>
+    <!-- Parque -->
+    <rect x="800" y="260" width="140" height="150" rx="8" fill="#cfe8d3"/>
+    <!-- Avenidas -->
+    <g stroke="#ffffff" stroke-width="18" fill="none">
+      <path d="M640 245 H1110"/>
+      <path d="M640 425 H1110"/>
+      <path d="M785 110 V690"/>
+      <path d="M955 110 V690"/>
+    </g>
+    <path d="M640 600 L1110 330" stroke="#ffd36b" stroke-width="12" fill="none" opacity="0.8"/>
+
+    <!-- Radio de búsqueda -->
+    <circle cx="870" cy="420" r="150" fill="#0A84FF" fill-opacity="0.08" stroke="#0A84FF" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="8 8"/>
+    <!-- Ruta -->
+    <path d="M870 420 C 900 380, 920 330, 955 300" stroke="#0A84FF" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 14" fill="none"/>
+
+    <!-- Usuario -->
+    <circle cx="870" cy="420" r="22" fill="#0A84FF" fill-opacity="0.2"/>
+    <circle cx="870" cy="420" r="11" fill="#0A84FF" stroke="#ffffff" stroke-width="4"/>
+
+    <!-- Pines de farmacias -->
+    <g fill="#34C759" stroke="#ffffff" stroke-width="3">
+      <path transform="translate(955 300)" d="M0 0 C-16 -18 -22 -28 -22 -38 A22 22 0 1 1 22 -38 C22 -28 16 -18 0 0 Z"/>
+      <path transform="translate(720 350)" d="M0 0 C-14 -16 -18 -24 -18 -32 A18 18 0 1 1 18 -32 C18 -24 14 -16 0 0 Z"/>
+      <path transform="translate(1040 500)" d="M0 0 C-14 -16 -18 -24 -18 -32 A18 18 0 1 1 18 -32 C18 -24 14 -16 0 0 Z"/>
+    </g>
+    <g fill="#ffffff">
+      <path transform="translate(955 262)" d="M-4 -11 H4 V-4 H11 V4 H4 V11 H-4 V4 H-11 V-4 H-4 Z"/>
+      <path transform="translate(720 318)" d="M-3 -9 H3 V-3 H9 V3 H3 V9 H-3 V3 H-9 V-3 H-3 Z"/>
+      <path transform="translate(1040 468)" d="M-3 -9 H3 V-3 H9 V3 H3 V9 H-3 V3 H-9 V-3 H-3 Z"/>
+    </g>
+  </g>
+
+  <!-- Tarjeta de farmacia -->
+  <g transform="translate(675 545)" filter="url(#shadow)" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <rect width="400" height="120" rx="22" fill="#ffffff"/>
+    <rect x="20" y="18" width="104" height="28" rx="14" fill="#34C759" fill-opacity="0.15"/>
+    <text x="72" y="38" text-anchor="middle" fill="#1f8f40" font-size="15" font-weight="700">● De turno</text>
+    <rect x="134" y="18" width="70" height="28" rx="14" fill="#0A84FF" fill-opacity="0.12"/>
+    <text x="169" y="38" text-anchor="middle" fill="#0A84FF" font-size="15" font-weight="700">1,2 km</text>
+    <text x="20" y="78" fill="#1c1c1e" font-size="22" font-weight="700">Farmacia del Barrio</text>
+    <text x="20" y="104" fill="#6e6e73" font-size="16">Abierta 24 horas</text>
+    <rect x="270" y="66" width="110" height="38" rx="12" fill="#0A84FF"/>
+    <text x="325" y="91" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">Cómo llegar</text>
+  </g>
+</svg>

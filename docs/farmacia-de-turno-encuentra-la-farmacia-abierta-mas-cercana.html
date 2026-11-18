@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Farmacia de Turno: encuentra la farmacia abierta más cercana 💊🗺️ | ClubInformatico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./theme/css/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    
+<header>
+<nav class="navbar">
+    <a href="./"><div class="logo">Club<span>Informático</span></div></a>
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="./">Inicio</a></li>
+        <li><a href=".#latest-posts">Últimas Entradas</a></li>
+        <li><a href=".#contact">Contacto</a></li>
+        <li><a href="./categories.html">Categorías</a></li>
+        <li><a href="./archives.html">Archivo</a></li>
+    </ul>
+</nav>
+</header>
+
+<main class="site-main">
+<section class="container">
+    <article class="article-page">
+        <h1>Farmacia de Turno: encuentra la farmacia abierta más cercana 💊🗺️</h1>
+        <p class="post-date">23 noviembre 2026</p>
+
+        <div class="article-content">
+            <h2>🌙 Son las 2 de la mañana y necesitas un remedio…</h2>
+<p>Fiebre, un dolor que no se pasa o un medicamento que se acabó justo cuando no debía.<br>
+Y ahí aparece la pregunta de siempre: <strong>¿qué farmacia está abierta a esta hora?</strong> 🤔</p>
+<p>Para esos momentos nace <strong>Farmacia de Turno</strong>, un proyecto del Club pensado para <a href="#">encontrar rápido la farmacia de turno más cercana, sin perder tiempo buscando</a>.</p>
+<p>👉 <strong>Úsala ahora:</strong> <a href="https://farmacia-de-turno.clubinformatico.cl/">farmacia-de-turno.clubinformatico.cl</a></p>
+<hr>
+<h2>💊 ¿De qué se trata?</h2>
+<p>Farmacia de Turno es una <strong>app web</strong> que muestra las <strong>farmacias de turno de Chile</strong> en un mapa interactivo y en un listado de tarjetas fáciles de leer.</p>
+<p>Puedes buscar de dos maneras:</p>
+<ul>
+<li>📍 <strong>Por cercanía:</strong> si das permiso de ubicación, la app muestra las farmacias de turno que están a <strong>menos de 15 km</strong>, ordenadas de la más cercana a la más lejana</li>
+<li>🏙️ <strong>Por comuna:</strong> eliges tu comuna en el listado y ves todas las farmacias de turno de esa zona</li>
+</ul>
+<p>Cada farmacia aparece en una tarjeta con:</p>
+<ul>
+<li>🏥 <strong>Nombre</strong> del local</li>
+<li>📍 <strong>Comuna</strong> y <strong>dirección</strong></li>
+<li>🕑 <strong>Horario</strong> de atención</li>
+<li>📏 <strong>Distancia</strong> en kilómetros (cuando buscas por cercanía)</li>
+<li>🚗 Botones directos a <strong>Google Maps</strong> y <strong>Waze</strong> para llegar sin enredos</li>
+</ul>
+<hr>
+<h2>✨ Funcionalidades</h2>
+<ul>
+<li>🏛️ <strong>Datos oficiales</strong> desde la API del <strong>Ministerio de Salud de Chile (MINSAL)</strong></li>
+<li>🗺️ <strong>Mapa interactivo</strong> con la ubicación exacta de cada farmacia</li>
+<li>📍 <strong>Búsqueda por cercanía</strong> usando la ubicación de tu dispositivo</li>
+<li>🚗 <strong>Navegación con un toque</strong> en Google Maps o Waze</li>
+<li>📲 <strong>Instalable (PWA)</strong> en el celular o el computador</li>
+<li>📴 <strong>Funciona sin conexión</strong> con la última información guardada</li>
+<li>🍏 <strong>Diseño estilo iOS</strong> con <strong>modo claro y oscuro</strong> automático</li>
+</ul>
+<hr>
+<h2>📲 Siempre a mano, incluso sin internet</h2>
+<p>Desde su versión <strong>1.1.0</strong>, Farmacia de Turno es una <strong>Progressive Web App (PWA)</strong>. Eso significa que puedes <strong>instalarla en tu pantalla de inicio</strong> y abrirla como cualquier otra app. 🙌</p>
+<p>Además, su <em>Service Worker</em> guarda la aplicación y los últimos datos de farmacias, así que <strong>puedes abrirla y revisar la última información aunque te quedes sin señal</strong>. Si pierdes la conexión, la app te avisa.</p>
+<p><strong>¿Cómo instalarla?</strong></p>
+<ul>
+<li>🍎 <strong>iPhone (Safari):</strong> botón <em>Compartir</em> → <em>Agregar a pantalla de inicio</em> (la misma app te muestra un banner con las instrucciones)</li>
+<li>🤖 <strong>Android (Chrome):</strong> toca el botón de instalación que aparece en la app o usa el menú ⋮ → <em>Instalar app</em></li>
+</ul>
+<blockquote>
+<p>💡 <strong>Pro tip:</strong> instálala hoy, cuando no la necesitas. Así la tendrás lista justo en el momento en que haga falta.</p>
+</blockquote>
+<hr>
+<h2>🛠️ ¿Cómo funciona por dentro?</h2>
+<p>El proyecto está hecho con <strong>HTML5, CSS3 y JavaScript</strong>, sin frameworks y con CSS propio para que sea liviano y cargue rápido.</p>
+<ul>
+<li>🏛️ Los datos vienen de la <strong>API pública del MINSAL</strong> con las farmacias de turno del país</li>
+<li>🗺️ El mapa usa <strong><a href="https://leafletjs.com/">Leaflet</a></strong> con mosaicos de <strong>CARTO</strong> basados en OpenStreetMap</li>
+<li>📐 Para calcular la distancia a cada farmacia se usa la <strong>fórmula de Haversine</strong>, que mide distancias sobre la superficie de la Tierra:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">calculateDistance</span><span class="p">(</span><span class="nx">lat1</span><span class="p">,</span><span class="w"> </span><span class="nx">lon1</span><span class="p">,</span><span class="w"> </span><span class="nx">lat2</span><span class="p">,</span><span class="w"> </span><span class="nx">lon2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6371</span><span class="p">;</span><span class="w"> </span><span class="c1">// Radio de la Tierra en km</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">dLat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">lat2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">lat1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">180</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">dLon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">lon2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">lon1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">180</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">dLat</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">dLat</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">lat1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">180</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">lat2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">180</span><span class="p">)</span><span class="w"> </span><span class="o">*</span>
+<span class="w">    </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">dLon</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">dLon</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">atan2</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nx">a</span><span class="p">),</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mf">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">a</span><span class="p">));</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">R</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">c</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Con esa distancia, la app filtra las farmacias que están a menos de 15 km y las ordena de la más cercana a la más lejana. 📏</p>
+<p>Es un excelente proyecto para aprender a <a href="#">consumir una API pública, trabajar con mapas y usar la geolocalización del navegador</a>, todo con un caso de uso real y muy útil.</p>
+<hr>
+<h2>💻 Pruébala en tu equipo</h2>
+<p>Clona el repositorio:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/KrlitosForever/farmacia-de-turno.git
+</code></pre></div>
+
+<p>y abre <code>index.html</code> en tu navegador. Necesitas conexión a internet para obtener los datos del MINSAL y cargar el mapa. 🌐</p>
+<blockquote>
+<p>ℹ️ Para probar la instalación y el modo offline, el Service Worker necesita servirse desde <code>localhost</code> o HTTPS. Un <code>python -m http.server</code> en la carpeta del proyecto es suficiente.</p>
+</blockquote>
+<hr>
+<h2>🤝 Súmate al proyecto</h2>
+<p>Farmacia de Turno es <strong>open source</strong> bajo la licencia <strong>GNU GPL v3</strong>: puedes usarla, estudiarla y modificarla, siempre que tus mejoras también sean públicas.</p>
+<p>El repositorio incluye un <code>CONTRIBUTING.md</code> con los pasos para colaborar y un <code>CHANGELOG.md</code> con la historia del proyecto. Algunas ideas para seguir mejorándola:</p>
+<ul>
+<li>🔎 Un <strong>buscador</strong> por nombre de farmacia o dirección</li>
+<li>🎚️ Elegir el <strong>radio de búsqueda</strong> en vez de los 15 km fijos</li>
+<li>📞 Agregar el <strong>teléfono</strong> de cada local</li>
+<li>⭐ Guardar <strong>comunas favoritas</strong></li>
+</ul>
+<p>Haz un <strong>fork</strong>, crea tu rama y envía un <strong>Pull Request</strong>. <a href="https://github.com/KrlitosForever/farmacia-de-turno">¡Toda contribución suma!</a></p>
+<hr>
+<h2>🚀 Que no te pille la noche</h2>
+<p>Instálala hoy y tenla lista para cuando la necesites. 💊</p>
+<ul>
+<li>🌐 <strong>Web:</strong> <a href="https://farmacia-de-turno.clubinformatico.cl/">farmacia-de-turno.clubinformatico.cl</a></li>
+<li>💻 <strong>Repositorio:</strong> <a href="https://github.com/KrlitosForever/farmacia-de-turno">github.com/KrlitosForever/farmacia-de-turno</a></li>
+</ul>
+<p>Compártela con tu familia, especialmente con quienes más la puedan necesitar.<br>
+¡Nos vemos en el próximo proyecto! 💻✨</p>
+        </div>
+
+        <p>
+            Categoría:
+            <a href="./category/proyectos.html">
+                Proyectos
+            </a>
+        </p>
+    </article>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>Club Informático</h3>
+                <p>
+                    ¡Bienvenido al punto de encuentro para los apasionados de la tecnología!
+                    Si te gustan la programación, la ciberseguridad, el hardware, el software libre, 
+                    o simplemente aprender cosas nuevas, este es tu lugar.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul class="footer-links">
+                    <li><a href="./">Inicio</a></li>
+                    <li><a href=".#latest-posts">Últimas Entradas</a></li>
+                    <li><a href=".#contact">Contacto</a></li>
+                    <li><a href="./categories.html">Categorías</a></li>
+                    <li><a href="./archives.html">Archivo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Categorías</h3>
+                <ul class="footer-links">
+                        <li>
+                            <a href="./category/comunidad.html">
+                                Comunidad
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./category/proyectos.html">
+                                Proyectos
+                            </a>
+                        </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>&copy;  ClubInformatico</p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="./theme/js/main.js"></script>
+
+</body>
+</html>
