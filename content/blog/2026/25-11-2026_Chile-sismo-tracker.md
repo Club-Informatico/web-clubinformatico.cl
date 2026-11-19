@@ -1,6 +1,6 @@
 ---
 Title: Chile Sismos Tracker: los últimos temblores de Chile en un vistazo 🌎📈
-Date: 2026-11-19 19:00
+Date: 2026-11-25 19:00
 Category: Proyectos  
 Authors: Carlos Carrasco  
 Summary: Conoce Chile Sismos Tracker, una web open source que muestra los últimos 15 sismos registrados en Chile con su magnitud, profundidad, ubicación y un emoji que te dice al tiro si fue un temblorcito o algo más serio.  

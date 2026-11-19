@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="19 de noviembre, Día Internacional del Hombre">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123b6d"/>
+      <stop offset="1" stop-color="#0a1830"/>
+    </linearGradient>
+    <linearGradient id="num" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7cc4ff"/>
+      <stop offset="1" stop-color="#2f80ed"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g fill="#7cc4ff" opacity="0.07">
+    <circle cx="1080" cy="120" r="230"/>
+    <circle cx="120" cy="740" r="200"/>
+  </g>
+
+  <!-- Hoja de calendario -->
+  <g transform="translate(110 150)" filter="url(#shadow)" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <rect width="380" height="440" rx="36" fill="#ffffff"/>
+    <path d="M0 36 A36 36 0 0 1 36 0 H344 A36 36 0 0 1 380 36 V110 H0 Z" fill="#2f80ed"/>
+    <circle cx="100" cy="0" r="14" fill="#0a1830"/>
+    <circle cx="280" cy="0" r="14" fill="#0a1830"/>
+    <text x="190" y="76" text-anchor="middle" fill="#ffffff" font-size="38" font-weight="800" letter-spacing="6">NOVIEMBRE</text>
+    <text x="190" y="330" text-anchor="middle" fill="url(#num)" font-size="230" font-weight="900">19</text>
+    <text x="190" y="400" text-anchor="middle" fill="#6e6e73" font-size="26" font-weight="600">Jueves · 2026</text>
+  </g>
+
+  <!-- Bigote (Movember) -->
+  <g transform="translate(850 210)" fill="#ffffff">
+    <path d="M0 0 C-30 -40 -90 -40 -120 -5 C-140 15 -170 15 -185 0 C-175 40 -120 55 -75 35 C-40 20 -15 15 0 25 C15 15 40 20 75 35 C120 55 175 40 185 0 C170 15 140 15 120 -5 C90 -40 30 -40 0 0 Z"/>
+  </g>
+
+  <!-- Título -->
+  <g font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="850" y="350" fill="#ffffff" fill-opacity="0.75" font-size="30" font-weight="600" letter-spacing="4">DÍA INTERNACIONAL</text>
+    <text x="850" y="440" fill="#ffffff" font-size="86" font-weight="900">del Hombre</text>
+    <text x="850" y="500" fill="#7cc4ff" font-size="28" font-style="italic">"El futuro somos todos"</text>
+  </g>
+
+  <!-- Seis pilares -->
+  <g transform="translate(850 600)" font-size="34" text-anchor="middle">
+    <g fill="#ffffff" fill-opacity="0.1">
+      <circle cx="-225" r="34"/>
+      <circle cx="-135" r="34"/>
+      <circle cx="-45"  r="34"/>
+      <circle cx="45"   r="34"/>
+      <circle cx="135"  r="34"/>
+      <circle cx="225"  r="34"/>
+    </g>
+    <text x="-225" y="12">🌟</text>
+    <text x="-135" y="12">🤝</text>
+    <text x="-45"  y="12">🩺</text>
+    <text x="45"   y="12">⚖️</text>
+    <text x="135"  y="12">💬</text>
+    <text x="225"  y="12">🌍</text>
+  </g>
+  <text x="850" y="690" text-anchor="middle" fill="#ffffff" fill-opacity="0.5"
+        font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" letter-spacing="3">LOS 6 PILARES</text>
+</svg>
